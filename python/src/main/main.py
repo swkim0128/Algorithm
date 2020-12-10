@@ -1,7 +1,7 @@
-from algorithms.dongbinna.NaAlgo04_4 import *
+from algorithms.dongbinna.NaAlgo05_11 import *
 
 def main():
-    algo = NaAlgo04_4()
+    algo = NaAlgo05_11()
     algo.perform()
 
 main()
