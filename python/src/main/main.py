@@ -1,7 +1,7 @@
-from algorithms.dongbinna.NaAlgo09_5 import *
+from algorithms.Baekjoon.Greedy.baek_11047 import *
 
 def main():
-    algo = NaAlgo09_5()
+    algo = baek_11047()
     algo.perform()
 
 main()
