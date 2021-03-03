@@ -44,3 +44,4 @@ class NaAlgo10_4(AlgorithmPerform):
             print("사이클이 발생했습니다.")
         else:
             print("사이클이 발생하지 않았습니다.")
+        
