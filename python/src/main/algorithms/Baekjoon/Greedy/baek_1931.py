@@ -3,8 +3,12 @@ from algorithms.AlgorithmPerform import AlgorithmPerform
 class baek_1931(AlgorithmPerform) :
     def perform(self) :
         n = int(input())
-        I = []
+        time = sorted([tuple(map(int, input().split())) for _ in range(n)], key=lambda x:(x[1], x[0]))
 
-        for i in range(n) :
-            start, end = map(int, input().split())
-            I.append((start, end))
+        ans = end = 0
+        for s, e in time :
+            if s >= end :
+                ans += 1
+                end = e
+
+        print(ans)
