@@ -1,7 +1,7 @@
-from algorithms.Baekjoon.Greedy.baek_5585 import *
+from algorithms.Baekjoon.Greedy.baek_1541 import *
 
 def main():
-    algo = baek_5585()
+    algo = baek_1541()
     algo.perform()
 
 main()
