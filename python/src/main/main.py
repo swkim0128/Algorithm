@@ -1,7 +1,10 @@
-from algorithms.Baekjoon.Greedy.baek_1541 import *
+from algorithms.programmers.hash.testKit02 import testKit02
+# from python.src.main.algorithms.AlgorithmPerform import AlgorithmPerform
 
 def main():
-    algo = baek_1541()
-    algo.perform()
+    algo = testKit02()
+    phone_book = ['12', '123', '345']
+    algo.solution02(phone_book)
+    # algo.perform()
 
 main()
