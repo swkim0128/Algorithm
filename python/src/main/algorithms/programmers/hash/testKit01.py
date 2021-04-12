@@ -1,6 +1,6 @@
 from algorithms.AlgorithmPerform import AlgorithmPerform
 
-class player(AlgorithmPerform) :
+class testKit01(AlgorithmPerform) :
     def perform(self) :
         def solution(participant, completion):
             participant.sort()
