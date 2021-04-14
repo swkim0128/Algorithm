@@ -1,9 +1,6 @@
-from algorithms.AlgorithmPerform import AlgorithmPerform 
-import sys
-import heapq
 
 class NaAlgo09_2(AlgorithmPerform):
-    def perform(self):
+    def solution(self):
         input = sys.stdin.readline
         INF = int(1e9)      # 무한을 의미하는 값으로 10억을 설정
 

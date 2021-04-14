@@ -1,7 +1,4 @@
-from algorithms.AlgorithmPerform import AlgorithmPerform 
-
-class NaAlgo08_8(AlgorithmPerform):
-    def perform(self):
+    def solution(self):
         # 정수 N, M을 입력받기
         n, m = map(int, input().split())
         # N개의 화폐 단위 정보를 입력받기

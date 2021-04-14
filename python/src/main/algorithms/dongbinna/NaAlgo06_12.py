@@ -1,7 +1,4 @@
-from algorithms.AlgorithmPerform import AlgorithmPerform 
-
-class NaAlgo06_12(AlgorithmPerform):
-    def perform(self):
+    def solution(self):
         n, k = map(int, input().split())
 
         a = list(map(int, input().split()))

@@ -1,7 +1,4 @@
-from algorithms.AlgorithmPerform import AlgorithmPerform 
-
-class NaAlgo06_11(AlgorithmPerform):
-    def perform(self):
+    def solution(self):
         n = int(input())
 
         array = []

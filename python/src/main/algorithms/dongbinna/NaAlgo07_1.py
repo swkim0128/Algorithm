@@ -1,7 +1,4 @@
-from algorithms.AlgorithmPerform import AlgorithmPerform 
-
-class NaAlgo07_1(AlgorithmPerform):
-    def perform(self):
+    def solution(self):
         # 순차 탐색 소스코드 구현
         def sequential_search(n, target, array):
             # 각 원소를 하나씩 확인하며

@@ -1,7 +1,4 @@
-from algorithms.AlgorithmPerform import AlgorithmPerform 
-
-class NaAlgo08_7(AlgorithmPerform):
-    def perform(self):
+    def solution(self):
         n = int(input())
 
         d = [0] * 1001

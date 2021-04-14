@@ -1,7 +1,4 @@
-from algorithms.AlgorithmPerform import AlgorithmPerform 
-
-class NaAlgo05_10(AlgorithmPerform):
-    def perform(self):
+    def solution(self):
         # N, M을 공백으로 구분하여 입력받기
         n, m = map(int, input().split())
 

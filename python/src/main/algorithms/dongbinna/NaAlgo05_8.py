@@ -1,7 +1,4 @@
-from algorithms.AlgorithmPerform import AlgorithmPerform 
-
-class NaAlgo05_8(AlgorithmPerform):
-    def perform(self):
+    def solution(self):
         def dfs(graph, v, visited):
             # 현재 노드를 방문 처리
             visited[v] = True

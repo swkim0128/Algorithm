@@ -1,8 +1,5 @@
-from algorithms.AlgorithmPerform import AlgorithmPerform 
-from collections import deque
-
 class NaAlgo05_9(AlgorithmPerform):
-    def perform(self):
+    def solution(self):
         # BFS 메서드 정의
         def bfs(graph, start, visited):
             # 큐(Queue) 구현을 위해 deque 라이브러리 사용

@@ -1,7 +1,4 @@
-from algorithms.AlgorithmPerform import AlgorithmPerform 
-
-class NaAlgo06_9(AlgorithmPerform):
-    def perform(self):
+    def solution(self):
         array = [('바나나', 2), ('사과', 5), ('당근', 3)]
 
         def setting(data):

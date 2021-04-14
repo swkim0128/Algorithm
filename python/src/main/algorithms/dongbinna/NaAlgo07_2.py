@@ -1,7 +1,4 @@
-from algorithms.AlgorithmPerform import AlgorithmPerform 
-
-class NaAlgo07_2(AlgorithmPerform):
-    def perform(self):
+    def solution(self):
         def binary_search(array, target, start, end):
             if start > end:
                 return None

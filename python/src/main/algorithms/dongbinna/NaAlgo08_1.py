@@ -1,7 +1,4 @@
-from algorithms.AlgorithmPerform import AlgorithmPerform 
-
-class NaAlgo08_1(AlgorithmPerform):
-    def perform(self):
+    def solution(self):
         # 피보나치 함수(Fibonacci Function)를 재귀 함수로 구현
         def fibo(x):
             if x == 1 or x == 2:

@@ -1,7 +1,4 @@
-from algorithms.AlgorithmPerform import AlgorithmPerform 
-
-class NaAlgo07_7(AlgorithmPerform):
-    def perform(self):
+    def solution(self):
         # 떡의 개수(N)와 요청한 떡의 길이(M)을 입력받기
         n, m = list(map(int, input().split(' ')))
         # 각 떡의 개별 높이 정보를 입력받기

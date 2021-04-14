@@ -1,7 +1,4 @@
-from algorithms.Baekjoon.Greedy.baek_11047 import *
+from algorithms.Excute import excute
 
-def main():
-    algo = baek_11047()
-    algo.perform()
-
-main()
+if __name__ == "__main__":
+    excute()

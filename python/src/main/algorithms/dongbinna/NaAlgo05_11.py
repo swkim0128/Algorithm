@@ -1,8 +1,5 @@
-from algorithms.AlgorithmPerform import AlgorithmPerform 
-from collections import deque
-
 class NaAlgo05_11(AlgorithmPerform):
-    def perform(self):
+    def solution(self):
         n, m = map(int, input().split())
         
         graph = [] 
