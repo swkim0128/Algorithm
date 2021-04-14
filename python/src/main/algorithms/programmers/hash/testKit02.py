@@ -1,3 +1,8 @@
+'''
+ 문제 - 전화번호 목록
+ 어떤 번호가 다른 번호의 접두어인 경우가 있으면 false를 그렇지 않으면 true를 return
+'''
+
 def solution(phone_book):
     phone_book = sorted(phone_book)
     answer = True
