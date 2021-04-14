@@ -1,7 +1,4 @@
-from algorithms.AlgorithmPerform import AlgorithmPerform 
-
-class NaAlgo08_2(AlgorithmPerform):
-    def perform(self):
+    def solution(self):
         # 한 번 계산된 결과를 메모이제이션(Memoization)하기 위한 리스트 초기화
         d = [0] * 100
 

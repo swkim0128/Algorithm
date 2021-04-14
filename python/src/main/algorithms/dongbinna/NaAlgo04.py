@@ -1,7 +1,4 @@
-from algorithms.AlgorithmPerform import AlgorithmPerform 
-
-class NaAlgo04(AlgorithmPerform): 
-    def perform(self):
+    def solution(self):
         n = int(input())
         x, y = 1, 1
         plans = input().split()

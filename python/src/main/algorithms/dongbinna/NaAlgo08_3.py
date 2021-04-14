@@ -1,7 +1,4 @@
-from algorithms.AlgorithmPerform import AlgorithmPerform 
-
-class NaAlgo08_3(AlgorithmPerform):
-    def perform(self):
+    def solution(self):
         d = [0] * 100
 
         def pibo(x):

@@ -1,7 +1,4 @@
-from algorithms.AlgorithmPerform import AlgorithmPerform
-
-class NaAlgo01(AlgorithmPerform):
-    def perform(self):
+    def solution(self):
         # 수 입력받기
         n, m, k = map(int, input().split())
 

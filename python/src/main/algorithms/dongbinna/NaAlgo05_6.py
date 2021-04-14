@@ -1,7 +1,4 @@
-from algorithms.AlgorithmPerform import AlgorithmPerform 
-
-class NaAlgo05_6(AlgorithmPerform):
-    def perform(self):
+    def solution(self):
         INF = 999999999 #  무한의 비용 선언
 
         # 2차원 리스트를 이용해 인접 행렬 표현

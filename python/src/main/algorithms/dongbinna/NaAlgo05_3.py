@@ -1,7 +1,4 @@
-from algorithms.AlgorithmPerform import AlgorithmPerform 
-
-class NaAlgo05_3(AlgorithmPerform):
-    def perform(self):
+    def solution(self):
         def recursive_function(i):
             # 100번째 출력했을 때 종료되도록 종료 조건 명시
             if i == 100:

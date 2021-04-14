@@ -1,7 +1,4 @@
-from algorithms.AlgorithmPerform import AlgorithmPerform 
-
-class NaAlgo08_5(AlgorithmPerform):
-    def perform(self):
+    def solution(self):
         # 정수 X를 입력받기
         x = int(input())
 

@@ -1,7 +1,4 @@
-from algorithms.AlgorithmPerform import AlgorithmPerform 
-
-class NaAlgo10_3(AlgorithmPerform):
-    def perform(self):
+    def solution(self):
         # 특정 원소가 속한 집합을 찾기
         def find_parent(parent, x):
             # 루트 노드가 아니라면, 루트 노드를 찾을 때까지 재귀적으로 호출

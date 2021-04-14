@@ -1,6 +1,3 @@
-from algorithms.AlgorithmPerform import AlgorithmPerform 
-
-class NaAlgo04_4(AlgorithmPerform):
     def perform(self):
         n, m = map(int, input().split())
         x, y, d = map(int, input().split())

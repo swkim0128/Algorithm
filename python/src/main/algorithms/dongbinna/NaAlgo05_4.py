@@ -1,7 +1,4 @@
-from algorithms.AlgorithmPerform import AlgorithmPerform 
-
-class NaAlgo05_4(AlgorithmPerform):
-    def perform(self):
+    def solution(self):
         # 반복적으로 구현한 n!
         def factorial_iterative(n):
             result = 1

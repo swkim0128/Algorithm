@@ -1,7 +1,4 @@
-from algorithms.AlgorithmPerform import AlgorithmPerform 
-
-class NaAlgo05_7(AlgorithmPerform):
-    def perform(self):
+    def solution(self):
         # 행(Row)이 3개인 2차원 리스트로 인접 리스트 표현
         graph = [[] for _ in range(3)]
 

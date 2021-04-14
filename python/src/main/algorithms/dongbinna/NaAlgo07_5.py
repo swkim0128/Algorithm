@@ -1,7 +1,4 @@
-from algorithms.AlgorithmPerform import AlgorithmPerform 
-
-class NaAlgo07_5(AlgorithmPerform):
-    def perform(self):
+    def solution(self):
         # N(가게의 부품 개수)을 입력받기
         n = int(input())
         array = [0] * 1000001

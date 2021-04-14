@@ -1,7 +1,4 @@
-from algorithms.AlgorithmPerform import AlgorithmPerform 
-
-class NaAlgo08_4(AlgorithmPerform):
-    def perform(self):
+    def solution(self):
         # 앞서 계산된 결과를 저장하기 위한 DP 테이블 초기화
         d = [0] * 100
         

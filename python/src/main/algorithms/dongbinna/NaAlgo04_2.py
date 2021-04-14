@@ -1,7 +1,4 @@
-from algorithms.AlgorithmPerform import AlgorithmPerform 
-
-class NaAlgo04_2(AlgorithmPerform): 
-    def perform(self):
+    def solution(self):
         n = int(input())
         count = 0
 

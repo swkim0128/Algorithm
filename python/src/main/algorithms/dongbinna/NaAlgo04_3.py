@@ -1,7 +1,4 @@
-from algorithms.AlgorithmPerform import AlgorithmPerform 
-
-class NaAlgo04_3(AlgorithmPerform): 
-    def perform(self):
+    def solution(self):
         input_data = input()
         row = int(input_data[1])
         column = int(ord(input_data[0])) - int(ord('a')) + 1
