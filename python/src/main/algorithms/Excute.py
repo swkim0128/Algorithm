@@ -1,10 +1,12 @@
-# from algorithms.dongbinna import solution as sol
+# from algorithms.dongbinna.greedy02 import solution as sol
 # from algorithms.Baekjoon import solution as sol
-from algorithms.programmers.hash.testKit02 import solution as sol
+from algorithms.programmers.stackqueue.testKit01 import solution as sol
 
 def excute():
-    args = ['12', '123', '321']
-    
-    result = sol(args)
+    length = 2
+    weight = 10
+    truck = [7, 4, 5, 6]
+
+    result = sol(length, weight, truck)
 
     print(result)
