@@ -2,6 +2,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/windows,linux,vscode,python
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,linux,vscode,python
 
+### git status_temp.txt ###
+status_temp.txt
+
 ### Linux ###
 *~
 
