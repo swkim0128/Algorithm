@@ -11,6 +11,8 @@
 
 def solution(name):
     moveCount = 0
+    length = len(name)
+    minMove = length - 1
 
     # a b c d e f g h i j k l m | n o p q r s t u v w x y z
     # 알파벳 a 에서 알바벳 n 을 기준으로 삼아 12, 이전 12, n : 다음, 이전 둘 다 13
@@ -23,14 +25,14 @@ def solution(name):
             moveCount += 26 - (ord(n) - ord("A"))
         else:
             moveCount += 13
-        moveCount += 1
 
-    moveCount -= 1
-    if name[-1] == "A":
-        moveCount -= 1
-    elif len(name) == 3 and name[1] == "A":
-        moveCount -= 1
+    for i in range(length):
+        nextIndex = i + 1
+        while nextIndex < length and name[nextIndex] == "A":
+            nextIndex += 1
+
+        minMove = min(minMove, (i * 2) + length - nextIndex)
+
+    moveCount += minMove
 
     return moveCount
-    # 알파벳 이동 길이가 3일 경우, 사이의 글자가 A인 경우, 마지막 글자가 A인 경우 이동 횟수는 0
-    # 이름 마지막 글자가 A인 경우 이동할 필요 X, 중간 글자중에 하나 라도 A가 아닌 경우 이동할 필요가 있음.
