@@ -8,12 +8,24 @@
 
 def solution(number, k):
     # k 자리수 만큼 범위를 지정,
-    # 그 중 가장 작은 수 제거,
+    # len(number) - k : 출력할 자리 수 개수
+    # 출력할 자리 수 개수의 높은 수 찾기
     # k 횟수만큼 위 행위를 반복, 결과값 출력
-    answer = list(number)
-    for i in range(k):
-        # 자리수를 하였을때
-        answer.remove(min(answer[0:k]))
+    answer = []
+
+    numberLength = len(number)
+    answerLength = len(number) - k
+    startSearchIndex = 0
+    endSearchIndex = numberLength - answerLength + 1
+    answerSearchLength = answerLength
+
+    for _ in range(answerLength):
+        searchNumber = max(number[startSearchIndex:endSearchIndex])
+        answer.append(searchNumber)
+
+        answerSearchLength -= 1
+        startSearchIndex = number.find(searchNumber, startSearchIndex) + 1
+        endSearchIndex = numberLength - answerSearchLength + 1
 
     answer = "".join(answer)
     return answer

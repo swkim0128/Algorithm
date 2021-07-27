@@ -10,6 +10,8 @@ def excute():
         number = str(random.randrange(1, 1000000))
         k = random.randrange(1, len(number))
 
+        # number = "1924"
+        # k = 2
         result = sol(number, k)
 
         print(number, k, result)
