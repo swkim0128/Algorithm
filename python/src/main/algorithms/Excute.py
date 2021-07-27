@@ -1,12 +1,17 @@
-# from algorithms.dongbinna.greedy02 import solution as sol
+# from algorithms.dongbinna.greedy03 import solution as sol
 # from algorithms.Baekjoon import solution as sol
-from algorithms.programmers.stackqueue.testKit01 import solution as sol
+from algorithms.programmers.greedy.testKit03 import solution as sol
+import random
+
 
 def excute():
-    length = 2
-    weight = 10
-    truck = [7, 4, 5, 6]
 
-    result = sol(length, weight, truck)
+    for _ in range(10):
+        number = str(random.randrange(1, 1000000))
+        k = random.randrange(1, len(number))
 
-    print(result)
+        # number = "1924"
+        # k = 2
+        result = sol(number, k)
+
+        print(number, k, result)
