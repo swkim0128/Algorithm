@@ -9,7 +9,7 @@ import algorithm.swexpert.*;
 
 public class Main {
     Main() {
-        Excute.excute(new baek_16987());
+        Excute.excute(new baek_11562());
     }
 
     public static void main(String[] args) {
