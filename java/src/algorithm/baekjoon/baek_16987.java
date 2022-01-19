@@ -16,12 +16,13 @@ public class baek_16987 extends Solution {
 
         for (int i = 0; i < N; i++) {
             StringTokenizer token = new StringTokenizer(read.readLine(), " ");
+            /*내구도, 무게*/
             int s, w;
-
             s = Integer.parseInt(token.nextToken());
             w = Integer.parseInt(token.nextToken());
 
             eggs[i] = new Egg(s, w);
+            eggs[i].crack = false;
         }
 
         dfs(0, 0);
@@ -30,43 +31,50 @@ public class baek_16987 extends Solution {
 
     int answer = 0;
     public void dfs(int index, int cnt) {
-        if (cnt == N - 1) {
-            answer = cnt;
-            return;
-        }
-        if (index == N) {
+        if (cnt == N || answer == N) {
             answer = N;
             return;
         }
-        if (eggs[index].crack) {
-            dfs(index + 1, cnt);
+        if (index >= N) {
+            if (answer < cnt)
+                answer = cnt;
+            return;
         }
+        if (eggs[index].s <= 0)
+            dfs(index + 1, cnt);
+        else {
+            boolean flag = false;
+            for (int i = 0; i < N; i++) {
+                if (index == i)
+                    continue;
+                if (eggs[i].s <= 0)
+                    continue;
 
-        for (int i = 0; i < N; i++) {
-            if (index == i)
-                continue;
-            if (eggs[i].crack)
-                continue;
+                flag = true;
+                eggs[index].s -= eggs[i].w;
+                eggs[i].s -= eggs[index].w;
 
-            int c = 0;
-            int a = eggs[index].s - eggs[i].w;
-            int b = eggs[i].s - eggs[index].w;
-            if (a <= 0) {
-                eggs[index].crack = true;
-                c++;
+                int amount = 0;
+                if (eggs[index].s <= 0) {
+                    amount++;
+                }
+                if (eggs[i].s <= 0) {
+                    amount++;
+                }
+
+                dfs(index + 1, cnt + amount);
+
+                eggs[index].s += eggs[i].w;
+                eggs[i].s += eggs[index].w;
             }
-            if (b <= 0) {
-                eggs[i].crack = true;
-                c++;
-            }
-            dfs(index + 1, cnt + c);
 
-            eggs[index].crack = false;
-            eggs[i].crack = false;
+            if (!flag)
+                dfs(index + 1, cnt);
         }
     }
 
     class Egg {
+        /*내구도, 무게*/
         int s, w;
         boolean crack;
 
