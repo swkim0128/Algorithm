@@ -4,7 +4,7 @@ import algorithm.baekjoon.*;
 
 public class Main {
     Main() {
-        Excute.excute(new baek_1445());
+        Excute.excute(new baek_24523());
     }
 
     public static void main(String[] args) {
