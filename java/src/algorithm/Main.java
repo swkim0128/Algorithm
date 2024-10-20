@@ -2,12 +2,22 @@ package algorithm;
 
 import algorithm.baekjoon.*;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 public class Main {
-    Main() {
-        Excute.excute(new baek_24523());
+    public static void main(String[] args) {
     }
 
-    public static void main(String[] args) {
-        new Main();
+    static {
+        try {
+            System.setIn(new FileInputStream("src/algorithm/input.txt"));
+        }
+        catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
+
+    public void run() throws IOException {}
 }
