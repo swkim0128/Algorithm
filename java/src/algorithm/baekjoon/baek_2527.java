@@ -1,14 +1,16 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class baek_2527 extends Solution {
+public class baek_2527 extends Main {
     @Override
-    public void solution() throws IOException {
-        StringTokenizer token;
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        StringTokenizer token;
 
         for (int i = 0; i < 4; i++) {
             token = new StringTokenizer(read.readLine(), " ");
@@ -122,5 +124,12 @@ public class baek_2527 extends Solution {
             return false;
         }
 
+    }
+    static {
+        try {
+            new baek_2527().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

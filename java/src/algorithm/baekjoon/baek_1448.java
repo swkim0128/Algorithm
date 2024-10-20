@@ -1,12 +1,14 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class baek_1448 extends Solution {
+public class baek_1448 extends Main {
     int N;
     Integer[] arr;
 
@@ -14,8 +16,8 @@ public class baek_1448 extends Solution {
     int a = 0, b = 0, c = 0;
 
     @Override
-    public void solution() throws IOException {
-        N = Integer.parseInt(read.readLine());
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        N = Integer.parseInt(read.readLine());
 
         arr = new Integer[N];
         for (int i = 0; i < N; i++) {
@@ -49,6 +51,13 @@ public class baek_1448 extends Solution {
             }
 
             combi(cnt + 1, ++start, amount + arr[i].intValue());
+        }
+    }
+    static {
+        try {
+            new baek_1448().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

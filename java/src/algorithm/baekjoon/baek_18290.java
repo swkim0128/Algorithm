@@ -1,15 +1,16 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
-import sun.awt.image.ImageWatched;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.*;
 
-public class baek_18290 extends Solution {
+public class baek_18290 extends Main {
     @Override
-    public void solution() throws IOException {
-        // input
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        // input
         StringTokenizer tokenizer = new StringTokenizer(read.readLine());
 
         int N = Integer.parseInt(tokenizer.nextToken());
@@ -88,6 +89,13 @@ public class baek_18290 extends Solution {
         Point(int y, int x) {
             this.y = y;
             this.x = x;
+        }
+    }
+    static {
+        try {
+            new baek_18290().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

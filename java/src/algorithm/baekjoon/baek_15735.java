@@ -1,12 +1,12 @@
 package algorithm.baekjoon;
 
-import algorithm.SolutionImpl;
+import algorithm.Main;
 
 import java.util.Scanner;
 
-public class baek_15735 implements SolutionImpl {
+public class baek_15735 extends Main {
     @Override
-    public void solution() {
+    public void run() {
         Scanner scan = new Scanner(System.in);
 
         final int MAX_ARR = 100001;
@@ -32,5 +32,8 @@ public class baek_15735 implements SolutionImpl {
         }
 
         System.out.println(S[N]);
+    }
+    static {
+        new baek_15735().run();
     }
 }

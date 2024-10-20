@@ -1,18 +1,20 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class baek_11559 extends Solution {
+public class baek_11559 extends Main {
     final int MAP_SIZE = 12;
     char[][] map;
 
     @Override
-    public void solution() throws IOException {
-        map = new char[MAP_SIZE][MAP_SIZE / 2];
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        map = new char[MAP_SIZE][MAP_SIZE / 2];
 
         for (int i = 0; i < MAP_SIZE; i++) {
             map[i] = read.readLine().toCharArray();
@@ -107,6 +109,13 @@ public class baek_11559 extends Solution {
         Point(int r, int c) {
             this.r = r;
             this.c = c;
+        }
+    }
+    static {
+        try {
+            new baek_11559().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

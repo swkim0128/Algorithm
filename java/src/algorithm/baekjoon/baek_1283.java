@@ -1,17 +1,19 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.StringTokenizer;
 
-public class baek_1283 extends Solution {
+public class baek_1283 extends Main {
 
     @Override
-    public void solution() throws IOException {
-        int N = Integer.parseInt(read.readLine());
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        int N = Integer.parseInt(read.readLine());
 
         Map<String, Boolean> isUsed = new HashMap<>();
         for (int n = 0; n < N; n++); {
@@ -41,6 +43,13 @@ public class baek_1283 extends Solution {
                     break;
                 }
             }
+        }
+    }
+    static {
+        try {
+            new baek_1283().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

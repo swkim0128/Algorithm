@@ -1,12 +1,12 @@
 package algorithm.baekjoon;
 
-import algorithm.SolutionImpl;
+import algorithm.Main;
 
 import java.util.Scanner;
 
-public class baek_10892 implements SolutionImpl {
+public class baek_10892 extends Main {
     @Override
-    public void solution() {
+    public void run() {
         Scanner scan = new Scanner(System.in);
         int N = scan.nextInt();
 
@@ -31,5 +31,8 @@ public class baek_10892 implements SolutionImpl {
         // 세 점 안에 점이 있으면 안됨.
 
         // 넓이가 다르면 다시
+    }
+    static {
+        new baek_10892().run();
     }
 }

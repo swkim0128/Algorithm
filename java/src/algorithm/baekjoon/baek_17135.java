@@ -1,12 +1,13 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.Arrays;
+import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class baek_17135 extends Solution {
+public class baek_17135 extends Main {
     int N, M, D;
     int[][] map;
 
@@ -16,7 +17,8 @@ public class baek_17135 extends Solution {
     int answer = 0;
 
     @Override
-    public void solution() throws IOException {
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer token = new StringTokenizer(read.readLine(), " ");
 
         N = Integer.parseInt(token.nextToken());
@@ -179,6 +181,13 @@ public class baek_17135 extends Solution {
         Enemy(int r, int c) {
             this.r = r;
             this.c = c;
+        }
+    }
+    static {
+        try {
+            new baek_17135().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

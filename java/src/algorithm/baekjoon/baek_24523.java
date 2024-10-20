@@ -1,16 +1,16 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class baek_24523 extends Solution {
+public class baek_24523 extends Main {
     @Override
-    public void solution() throws IOException {
-        // input
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        // input
         int N;
         int[] arr;
 
@@ -46,6 +46,13 @@ public class baek_24523 extends Solution {
                 System.out.print(result[i]);
             }
             System.out.print(" ");
+        }
+    }
+    static {
+        try {
+            new baek_24523().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

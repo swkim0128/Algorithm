@@ -1,18 +1,21 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class baek_3109 extends Solution {
+public class baek_3109 extends Main {
     int R, C;
     char[][] map;
 
     int answer = 0;
 
     @Override
-    public void solution() throws IOException {
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer token = new StringTokenizer(read.readLine(), " ");
         R = Integer.parseInt(token.nextToken());
         C = Integer.parseInt(token.nextToken());
@@ -70,6 +73,13 @@ public class baek_3109 extends Solution {
                 map[nr][nc] = 'U';
                 dfs(nr, nc);
             }
+        }
+    }
+    static {
+        try {
+            new baek_3109().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

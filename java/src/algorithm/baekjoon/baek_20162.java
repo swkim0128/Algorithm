@@ -1,16 +1,16 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.StringTokenizer;
+import java.io.InputStreamReader;
 
-public class baek_20162 extends Solution {
+public class baek_20162 extends Main {
 
     @Override
-    public void solution() throws IOException {
-        // input
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        // input
         int N = Integer.parseInt(read.readLine());
 
         int[] avg = new int[N];
@@ -31,5 +31,12 @@ public class baek_20162 extends Solution {
 
         // output
         System.out.println(max);
+    }
+    static {
+        try {
+            new baek_20162().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

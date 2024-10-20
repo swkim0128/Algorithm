@@ -1,13 +1,12 @@
 package algorithm.baekjoon;
 
-import algorithm.SolutionImpl;
-import com.sun.tools.internal.ws.processor.modeler.wsdl.PseudoSchemaBuilder;
+import algorithm.Main;
 
 import java.util.Scanner;
 
-public class baek_4084 implements SolutionImpl {
+public class baek_4084 extends Main {
     @Override
-    public void solution() {
+    public void run() {
         Scanner scan = new Scanner(System.in);
         int a, b, c, d;
 
@@ -38,5 +37,8 @@ public class baek_4084 implements SolutionImpl {
                 answer++;
             }
         }
+    }
+    static {
+        new baek_4084().run();
     }
 }

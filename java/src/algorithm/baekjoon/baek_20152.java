@@ -1,17 +1,17 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.io.InputStreamReader;
 import java.util.Stack;
 import java.util.StringTokenizer;
 
-public class baek_20152 extends Solution {
+public class baek_20152 extends Main {
     @Override
-    public void solution() throws IOException {
-        // input
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        // input
         StringTokenizer token = new StringTokenizer(read.readLine());
 
         // 강산 좌표
@@ -75,6 +75,13 @@ public class baek_20152 extends Solution {
         public Point(int y, int x) {
             this.y = y;
             this.x = x;
+        }
+    }
+    static {
+        try {
+            new baek_20152().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

@@ -1,17 +1,19 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class baek_16987 extends Solution {
+public class baek_16987 extends Main {
     int N;
     Egg[] eggs;
 
     @Override
-    public void solution() throws IOException {
-        N = Integer.parseInt(read.readLine());
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        N = Integer.parseInt(read.readLine());
         eggs = new Egg[N];
 
         for (int i = 0; i < N; i++) {
@@ -81,6 +83,13 @@ public class baek_16987 extends Solution {
         Egg(int s, int w) {
             this.s = s;
             this.w = w;
+        }
+    }
+    static {
+        try {
+            new baek_16987().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

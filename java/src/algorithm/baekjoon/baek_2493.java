@@ -1,15 +1,16 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.Stack;
+import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class baek_2493 extends Solution {
+public class baek_2493 extends Main {
     @Override
-    public void solution() throws IOException {
-        int N = Integer.parseInt(read.readLine());
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        int N = Integer.parseInt(read.readLine());
         int[] top = new int[N];
 
         StringTokenizer token = new StringTokenizer(read.readLine(), " ");
@@ -75,6 +76,13 @@ public class baek_2493 extends Solution {
 
         public boolean isEmpty() {
             return top == -1 ? true : false;
+        }
+    }
+    static {
+        try {
+            new baek_2493().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

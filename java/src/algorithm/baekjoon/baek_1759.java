@@ -1,12 +1,14 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class baek_1759 extends Solution {
+public class baek_1759 extends Main {
     int L, C;
 
     char[] arr;
@@ -14,8 +16,8 @@ public class baek_1759 extends Solution {
 
     char[] answer;
     @Override
-    public void solution() throws IOException {
-        StringTokenizer token = new StringTokenizer(read.readLine(), " ");
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        StringTokenizer token = new StringTokenizer(read.readLine(), " ");
 
         L = Integer.parseInt(token.nextToken());
         C = Integer.parseInt(token.nextToken());
@@ -70,6 +72,13 @@ public class baek_1759 extends Solution {
 
             answer[cnt] = arr[i];
             combi(cnt + 1, ++start, vowel + vowelCnt, consonant + consonantCnt);
+        }
+    }
+    static {
+        try {
+            new baek_1759().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

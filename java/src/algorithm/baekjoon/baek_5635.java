@@ -5,9 +5,9 @@
 //import java.util.Date;
 //import java.util.Scanner;
 //
-//public class baek_5635 implements SolutionImpl {
+//public class baek_5635 extends Main {
 //    @Override
-//    public void solution() {
+//    public void run() {
 //        Scanner scan = new Scanner(System.in);
 //        int n = scan.nextInt();
 //        String[] name = new String[n];

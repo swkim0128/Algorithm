@@ -1,12 +1,12 @@
 package algorithm.baekjoon;
 
-import algorithm.SolutionImpl;
+import algorithm.Main;
 
 import java.util.Scanner;
 
-public class baek_17478 implements SolutionImpl {
+public class baek_17478 extends Main {
     @Override
-    public void solution() {
+    public void run() {
         Scanner scan = new Scanner(System.in);
         int N = scan.nextInt();
         count = N;
@@ -56,5 +56,8 @@ public class baek_17478 implements SolutionImpl {
             System.out.print("____");
         }
         System.out.println("라고 답변하였지.");
+    }
+    static {
+        new baek_17478().run();
     }
 }

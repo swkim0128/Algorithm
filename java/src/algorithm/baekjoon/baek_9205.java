@@ -1,14 +1,19 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.*;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.StringTokenizer;
 
-public class baek_9205 extends Solution {
+public class baek_9205 extends Main {
     @Override
-    public void solution() throws IOException {
-        int testCase = Integer.parseInt(read.readLine());
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        int testCase = Integer.parseInt(read.readLine());
 
         for (int t = 0; t < testCase; t++) {
             int N = Integer.parseInt(read.readLine());
@@ -102,6 +107,13 @@ public class baek_9205 extends Solution {
 
         public int getDistance(int x, int y) {
             return Math.abs(this.x - x) + Math.abs(this.y - y);
+        }
+    }
+    static {
+        try {
+            new baek_9205().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

@@ -1,15 +1,17 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
-import java.io.IOException;
+import java.io.*;
 import java.util.Arrays;
 import java.util.StringTokenizer;
-import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
 
-public class baek_11399 extends Solution {
+public class baek_11399 extends Main {
     @Override
-    public void solution() throws IOException {
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter write = new BufferedWriter(new OutputStreamWriter(System.out));
+
         int N = Integer.parseInt(read.readLine());
 
         StringTokenizer token = new StringTokenizer(read.readLine(), " ");
@@ -31,5 +33,12 @@ public class baek_11399 extends Solution {
 //        System.out.println(sum);
         write.write(sum + "");
         write.flush();
+    }
+    static {
+        try {
+            new baek_11399().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

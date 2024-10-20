@@ -1,17 +1,18 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.net.Inet4Address;
+import java.io.InputStreamReader;
 import java.util.*;
 
-public class baek_17141 extends Solution {
+public class baek_17141 extends Main {
     static int N;
     static int M;
     @Override
-    public void solution() throws IOException {
-        // input
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        // input
         StringTokenizer token = new StringTokenizer(read.readLine());
 
         N = Integer.parseInt(token.nextToken());
@@ -122,6 +123,13 @@ public class baek_17141 extends Solution {
         Point(int r, int c) {
             this.r = r;
             this.c = c;
+        }
+    }
+    static {
+        try {
+            new baek_17141().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

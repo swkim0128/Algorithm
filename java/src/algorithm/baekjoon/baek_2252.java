@@ -1,23 +1,25 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class baek_2252 extends Solution {
+public class baek_2252 extends Main {
     @Override
-    public void solution() throws IOException {
-        int N, M;
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        int N, M;
 
         StringTokenizer token = new StringTokenizer(read.readLine(), " ");
         N = Integer.parseInt(token.nextToken());
         M = Integer.parseInt(token.nextToken());
 
-        LinkedList<Integer>[] arr = new LinkedList[N + 1];
+        LinkedList[] arr = new LinkedList[N + 1];
         int[] indegree = new int[N + 1];
 
         for (int i = 0; i < N + 1; i++) {
@@ -46,11 +48,11 @@ public class baek_2252 extends Solution {
             int now = queue.poll();
             answer.add(now);
 
-            for (int i : arr[now]) {
-                indegree[i]--;
+            for (Object i : arr[now]) {
+                indegree[(int) i]--;
 
-                if (indegree[i] == 0)
-                    queue.offer(i);
+                if (indegree[(int) i] == 0)
+                    queue.offer((Integer) i);
             }
         }
 
@@ -58,5 +60,12 @@ public class baek_2252 extends Solution {
             System.out.print(answer.get(i) + " ");
         }
         System.out.println();
+    }
+    static {
+        try {
+            new baek_2252().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

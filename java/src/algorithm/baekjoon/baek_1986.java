@@ -1,18 +1,19 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.Arrays;
+import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class baek_1986 extends Solution {
+public class baek_1986 extends Main {
     static int N, M;
     static int[][] arr;
 
     @Override
-    public void solution() throws IOException {
-        // input
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        // input
         StringTokenizer token = new StringTokenizer(read.readLine());
         N = Integer.parseInt(token.nextToken());
         M = Integer.parseInt(token.nextToken());
@@ -121,6 +122,13 @@ public class baek_1986 extends Solution {
                 return;
             }
             queen(nr, nc, d);
+        }
+    }
+    static {
+        try {
+            new baek_1986().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

@@ -1,12 +1,13 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
-import com.sun.codemodel.internal.JCase;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class baek_15683 extends Solution {
+public class baek_15683 extends Main {
     int N, M;
     char[][] map;
 
@@ -16,8 +17,8 @@ public class baek_15683 extends Solution {
     int answer = 0;
 
     @Override
-    public void solution() throws IOException {
-        StringTokenizer token = new StringTokenizer(read.readLine(), " ");
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        StringTokenizer token = new StringTokenizer(read.readLine(), " ");
 
         N = Integer.parseInt(token.nextToken());
         M = Integer.parseInt(token.nextToken());
@@ -262,6 +263,13 @@ public class baek_15683 extends Solution {
                 case 5:
                     break;
             }
+        }
+    }
+    static {
+        try {
+            new baek_15683().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

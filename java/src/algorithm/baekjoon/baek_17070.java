@@ -1,19 +1,21 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class baek_17070 extends Solution {
+public class baek_17070 extends Main {
     int N;
     int[][] map;
 
     @Override
-    public void solution() throws IOException {
-
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
         N = Integer.parseInt(read.readLine());
         map = new int[N][N];
 
@@ -172,6 +174,13 @@ public class baek_17070 extends Solution {
             this.r = r;
             this.c = c;
             this.direct = d;
+        }
+    }
+    static {
+        try {
+            new baek_17070().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

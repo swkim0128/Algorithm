@@ -1,11 +1,13 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-public class baek_2239 extends Solution {
+public class baek_2239 extends Main {
     final int SUDOKU = 9;
 
     int[][] map;
@@ -16,8 +18,8 @@ public class baek_2239 extends Solution {
     boolean[][] squre = new boolean[SUDOKU][SUDOKU + 1];
 
     @Override
-    public void solution() throws IOException {
-        map = new int[SUDOKU][SUDOKU];
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        map = new int[SUDOKU][SUDOKU];
 
         for (int i = 0; i < SUDOKU; i++) {
             char[] ch = read.readLine().toCharArray();
@@ -127,6 +129,13 @@ public class baek_2239 extends Solution {
         Point(int r, int c) {
             this.r = r;
             this.c = c;
+        }
+    }
+    static {
+        try {
+            new baek_2239().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

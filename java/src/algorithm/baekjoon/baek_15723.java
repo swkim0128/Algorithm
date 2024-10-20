@@ -1,15 +1,17 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
-public class baek_15723 extends Solution {
+public class baek_15723 extends Main {
     @Override
-    public void solution() throws IOException {
-        int n;
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        int n;
         int m;
 
         // input
@@ -53,6 +55,13 @@ public class baek_15723 extends Solution {
         // output
         for (int i = 0; i < m; i++) {
             System.out.println(result[i]);
+        }
+    }
+    static {
+        try {
+            new baek_15723().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

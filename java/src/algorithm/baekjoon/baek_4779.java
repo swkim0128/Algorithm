@@ -1,16 +1,18 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class baek_4779 extends Solution {
+public class baek_4779 extends Main {
 
     @Override
-    public void solution() throws IOException {
-        while (read.ready()) {
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        while (read.ready()) {
             int N = Integer.parseInt(read.readLine());
 
             List<char[]> dynamicArr = new ArrayList<>();
@@ -46,6 +48,13 @@ public class baek_4779 extends Solution {
             }
 
             System.out.println(dynamicArr.get(dynamicArr.size() - 1));
+        }
+    }
+    static {
+        try {
+            new baek_4779().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

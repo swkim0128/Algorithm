@@ -1,10 +1,12 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
-public class baek_3040 extends Solution {
+public class baek_3040 extends Main {
     final int DWARF_NUM = 9;
     final int ANSWER_NUM = 7;
 
@@ -13,8 +15,8 @@ public class baek_3040 extends Solution {
     int[] answer = new int[ANSWER_NUM];
 
     @Override
-    public void solution() throws IOException {
-        dwarf = new int[DWARF_NUM];
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        dwarf = new int[DWARF_NUM];
 
         for (int i = 0; i < DWARF_NUM; i++) {
             dwarf[i] = Integer.parseInt(read.readLine());
@@ -41,6 +43,13 @@ public class baek_3040 extends Solution {
         for (int i = start; i < DWARF_NUM; i++) {
             res[cnt] = i;
             combi(cnt + 1, ++start, amount + dwarf[i]);
+        }
+    }
+    static {
+        try {
+            new baek_3040().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

@@ -1,11 +1,11 @@
 package algorithm.baekjoon;
 
-import algorithm.SolutionImpl;
+import algorithm.Main;
 
 import java.util.Scanner;
 
-public class baek_9414 implements SolutionImpl {
-    public void solution() {
+public class baek_9414 extends Main {
+    public void run() {
         Scanner scan = new Scanner(System.in);
         int testCase = scan.nextInt();
         int arrNum = 40;
@@ -61,5 +61,8 @@ public class baek_9414 implements SolutionImpl {
                 System.out.println("Too expensive");
             }
         }
+    }
+    static {
+        new baek_9414().run();
     }
 }

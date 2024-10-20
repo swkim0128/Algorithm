@@ -1,15 +1,14 @@
 package algorithm.baekjoon;
 
-import algorithm.SolutionImpl;
+import algorithm.Main;
 
 import java.io.*;
-import java.util.Scanner;
 import java.util.StringTokenizer;
 
-public class baek_19575 implements SolutionImpl {
+public class baek_19575 extends Main {
     @Override
-    public void solution() throws IOException {
-//        Scanner scan = new Scanner(System.in);
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));//        Scanner scan = new Scanner(System.in);
         final int num = 1000000007;
 
         BufferedReader scan = new BufferedReader(new InputStreamReader(System.in));
@@ -37,5 +36,12 @@ public class baek_19575 implements SolutionImpl {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         bw.write(String.valueOf(result));
         bw.flush();
+    }
+    static {
+        try {
+            new baek_19575().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

@@ -1,17 +1,19 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class baek_11562 extends Solution {
+public class baek_11562 extends Main {
     final int INF = 999_999_999;
     int n, m;
 
     @Override
-    public void solution() throws IOException {
-
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer token = new StringTokenizer(read.readLine(), " ");
         n = Integer.parseInt(token.nextToken());
         m = Integer.parseInt(token.nextToken());
@@ -78,6 +80,13 @@ public class baek_11562 extends Solution {
                     map[i][j] = Math.min(map[i][k] + map[k][j], map[i][j]);
                 }
             }
+        }
+    }
+    static {
+        try {
+            new baek_11562().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

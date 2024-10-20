@@ -1,14 +1,16 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.Arrays;
+import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class baek_1149 extends Solution {
+public class baek_1149 extends Main {
     @Override
-    public void solution() throws IOException {
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(read.readLine());
 
         int[][] house = new int[N + 1][3];
@@ -51,5 +53,12 @@ public class baek_1149 extends Solution {
         }
 
         System.out.println(result);
+    }
+    static {
+        try {
+            new baek_1149().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

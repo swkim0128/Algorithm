@@ -1,20 +1,22 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class baek_3187 extends Solution {
+public class baek_3187 extends Main {
     int R;
     int C;
     boolean[][] visited;
 
     @Override
-    public void solution() throws IOException {
-        // input
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        // input
         StringTokenizer token = new StringTokenizer(read.readLine());
 
         R = Integer.parseInt(token.nextToken());
@@ -116,6 +118,13 @@ public class baek_3187 extends Solution {
         public Point(int r, int c) {
             this.r = r;
             this.c = c;
+        }
+    }
+    static {
+        try {
+            new baek_3187().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

@@ -1,12 +1,12 @@
 package algorithm.baekjoon;
 
-import algorithm.SolutionImpl;
+import algorithm.Main;
 
 import java.util.Scanner;
 
-public class baek_10570 implements SolutionImpl {
+public class baek_10570 extends Main {
     @Override
-    public void solution() {
+    public void run() {
         Scanner scan = new Scanner(System.in);
         final int SOfSize = 1001;
 
@@ -33,5 +33,8 @@ public class baek_10570 implements SolutionImpl {
 
             System.out.println(answerIndex);
         }
+    }
+    static {
+        new baek_10570().run();
     }
 }

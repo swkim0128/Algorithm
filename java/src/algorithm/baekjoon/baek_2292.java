@@ -1,13 +1,15 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
-public class baek_2292 extends Solution {
+public class baek_2292 extends Main {
     @Override
-    public void solution() throws IOException {
-        int N = Integer.parseInt(read.readLine());
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        int N = Integer.parseInt(read.readLine());
 
         // 1, 6, startRange, endRange, count, answer
         final int BEE = 6;
@@ -28,5 +30,12 @@ public class baek_2292 extends Solution {
         }
 
         System.out.println(answer);
+    }
+    static {
+        try {
+            new baek_2292().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

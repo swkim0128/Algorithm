@@ -1,19 +1,21 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class baek_3055 extends Solution {
+public class baek_3055 extends Main {
     int R, C;
 
     @Override
-    public void solution() throws IOException {
-        StringTokenizer token = new StringTokenizer(read.readLine(), " ");
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        StringTokenizer token = new StringTokenizer(read.readLine(), " ");
         R = Integer.parseInt(token.nextToken());
         C = Integer.parseInt(token.nextToken());
 
@@ -187,6 +189,13 @@ public class baek_3055 extends Solution {
         Hog(int r, int c) {
             this.r = r;
             this.c = c;
+        }
+    }
+    static {
+        try {
+            new baek_3055().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

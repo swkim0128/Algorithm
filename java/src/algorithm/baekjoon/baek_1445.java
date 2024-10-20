@@ -1,17 +1,18 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.LinkedList;
-import java.util.Locale;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class baek_1445 extends Solution {
+public class baek_1445 extends Main {
     @Override
-    public void solution() throws IOException {
-        // input
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        // input
         int N, M;
         char[][] map;
 
@@ -125,6 +126,13 @@ public class baek_1445 extends Solution {
             this.c = c;
             this.trashCnt = trashCnt;
             this.sideCnt = sideCnt;
+        }
+    }
+    static {
+        try {
+            new baek_1445().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

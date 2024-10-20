@@ -1,17 +1,18 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.StringTokenizer;
 
-public class baek_1931 extends Solution {
+public class baek_1931 extends Main {
     @Override
-    public void solution() throws IOException {
-        int N;
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        int N;
 
         N = Integer.parseInt(read.readLine());
 
@@ -57,6 +58,13 @@ public class baek_1931 extends Solution {
             else {
                 return this.b - o.b;
             }
+        }
+    }
+    static {
+        try {
+            new baek_1931().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

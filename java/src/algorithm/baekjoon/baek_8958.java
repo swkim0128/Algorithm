@@ -1,13 +1,15 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
-public class baek_8958 extends Solution {
+public class baek_8958 extends Main {
     @Override
-    public void solution() throws IOException {
-        int testCase = Integer.parseInt(read.readLine());
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        int testCase = Integer.parseInt(read.readLine());
 
         for (int t = 0; t < testCase; t++) {
             String quiz = read.readLine();
@@ -31,6 +33,13 @@ public class baek_8958 extends Solution {
             }
 
             System.out.println(answer);
+        }
+    }
+    static {
+        try {
+            new baek_8958().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

@@ -1,12 +1,12 @@
 package algorithm.baekjoon;
 
-import algorithm.SolutionImpl;
+import algorithm.Main;
 
 import java.util.Scanner;
 
-public class baek_1244 implements SolutionImpl {
+public class baek_1244 extends Main {
     @Override
-    public void solution() {
+    public void run() {
         Scanner scan = new Scanner(System.in);
         int T = scan.nextInt();
         int[] switchArr = new int[T];
@@ -65,5 +65,8 @@ public class baek_1244 implements SolutionImpl {
             if ((i  + 1) % 20 == 0)
                 System.out.println();
         }
+    }
+    static {
+        new baek_1244().run();
     }
 }

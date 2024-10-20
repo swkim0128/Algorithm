@@ -1,14 +1,17 @@
 package algorithm.baekjoon;
 
 import algorithm.Main;
-import algorithm.Solution;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
 
-public class baek_2851 extends Solution {
+public class baek_2851 extends Main {
     @Override
-    public void solution() throws IOException {
-        final int SIZE = 10;
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        final int SIZE = 10;
+        Scanner scan = new Scanner(System.in);
         int[] mushroom = new int[SIZE];
 
         for (int i = 0; i < SIZE; i++) {
@@ -36,5 +39,12 @@ public class baek_2851 extends Solution {
         }
 
         System.out.println(sum);
+    }
+    static {
+        try {
+            new baek_2851().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

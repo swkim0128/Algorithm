@@ -1,14 +1,18 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.*;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Stack;
 
-public class baek_1935 extends Solution {
+public class baek_1935 extends Main {
     @Override
-    public void solution() throws IOException {
-        int N = Integer.parseInt(read.readLine());
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        int N = Integer.parseInt(read.readLine());
         String str = read.readLine();
 
         List<Double> numList = new ArrayList<>();
@@ -50,5 +54,12 @@ public class baek_1935 extends Solution {
 
         double result = stack.pop();
         System.out.println(String.format("%.2f", result));
+    }
+    static {
+        try {
+            new baek_1935().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

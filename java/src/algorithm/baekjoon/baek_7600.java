@@ -1,12 +1,12 @@
 package algorithm.baekjoon;
 
-import algorithm.SolutionImpl;
+import algorithm.Main;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class baek_7600 implements SolutionImpl {
-    public void solution() {
+public class baek_7600 extends Main {
+    public void run() {
         Scanner scan = new Scanner(System.in);
         boolean[] visited = new boolean[26];
 
@@ -39,5 +39,8 @@ public class baek_7600 implements SolutionImpl {
             Arrays.fill(visited, false);
             System.out.println(answer);
         }
+    }
+    static {
+        new baek_7600().run();
     }
 }

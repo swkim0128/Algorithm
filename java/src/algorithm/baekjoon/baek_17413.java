@@ -1,13 +1,15 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
-public class baek_17413 extends Solution {
+public class baek_17413 extends Main {
     @Override
-    public void solution() throws IOException {
-        String str = read.readLine();
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        String str = read.readLine();
         char[] arr = str.toCharArray();
 
         boolean isSwap = true;
@@ -59,6 +61,13 @@ public class baek_17413 extends Solution {
 
         for (int i = 0; i < temp.length; i++) {
             arr[end - i - 1] = temp[i];
+        }
+    }
+    static {
+        try {
+            new baek_17413().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

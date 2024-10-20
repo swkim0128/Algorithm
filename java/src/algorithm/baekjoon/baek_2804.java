@@ -1,11 +1,11 @@
 package algorithm.baekjoon;
 
-import algorithm.SolutionImpl;
+import algorithm.Main;
 
 import java.util.Scanner;
 
-public class baek_2804 implements SolutionImpl {
-    public void solution() {
+public class baek_2804 extends Main {
+    public void run() {
         Scanner scan = new Scanner(System.in);
 
         String A = scan.next();
@@ -49,5 +49,8 @@ public class baek_2804 implements SolutionImpl {
             }
             System.out.println();
         }
+    }
+    static {
+        new baek_2804().run();
     }
 }

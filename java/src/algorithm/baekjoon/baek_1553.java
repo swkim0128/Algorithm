@@ -1,13 +1,15 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
-public class baek_1553 extends Solution {
+public class baek_1553 extends Main {
     @Override
-    public void solution() throws IOException {
-        // input
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        // input
         int N = 8;
         int M = 7;
 
@@ -32,5 +34,12 @@ public class baek_1553 extends Solution {
         // 8 * 7 격자를 여러개 조합한 판이 부합하는지 체크
         // dfs 탐색점 중심으로 오른쪽, 아래 하나 체크
         // 마지막 점이 조건에 부합하지 못하면
+    }
+    static {
+        try {
+            new baek_1553().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

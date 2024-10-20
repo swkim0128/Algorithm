@@ -1,16 +1,18 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class baek_16926 extends Solution {
+public class baek_16926 extends Main {
     int[][] map;
 
     @Override
-    public void solution() throws IOException {
-        int N, M, R;
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        int N, M, R;
         StringTokenizer token = new StringTokenizer(read.readLine(), " ");
 
         N = Integer.parseInt(token.nextToken());
@@ -61,5 +63,12 @@ public class baek_16926 extends Solution {
         }
 
         reculsive(sR + 1, eR - 1, sC + 1, eC - 1);
+    }
+    static {
+        try {
+            new baek_16926().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

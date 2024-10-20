@@ -2,20 +2,22 @@
 [입력]
 N
 
-[solution]
+[run]
 1. 입력을 받는다.
 2. 적록색약이 아닌 경우, 적록색약인 경우로 나누어 접근한다.
 3. 그래프 탐색을 이용하여 적록색약의 구역을 확인한다.
 */
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Scanner;
-import java.io.IOException;
 
-public class baek_10026 extends Solution {
+public class baek_10026 extends Main {
     // N
     static int N;
 
@@ -31,8 +33,8 @@ public class baek_10026 extends Solution {
     static int cnt, cnt2;
 
     @Override
-    public void solution() throws IOException {
-        Scanner sc = new Scanner(System.in);
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        Scanner sc = new Scanner(System.in);
 
         N = sc.nextInt();
 
@@ -97,6 +99,13 @@ public class baek_10026 extends Solution {
                     dfs(nxtRow, nxtCol);
                 }
             }
+        }
+    }
+    static {
+        try {
+            new baek_10026().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

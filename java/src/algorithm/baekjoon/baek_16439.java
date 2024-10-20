@@ -1,14 +1,16 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class baek_16439 extends Solution {
+public class baek_16439 extends Main {
     @Override
-    public void solution() throws IOException {
-        // input
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        // input
         StringTokenizer tokenizer = new StringTokenizer(read.readLine());
 
         //  회원
@@ -57,5 +59,12 @@ public class baek_16439 extends Solution {
     public int max(int i, int j, int k) {
         int tmp = Math.max(i, j);
         return Math.max(tmp, k);
+    }
+    static {
+        try {
+            new baek_16439().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

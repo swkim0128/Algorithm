@@ -1,11 +1,13 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class baek_15686 extends Solution {
+public class baek_15686 extends Main {
     int N, M;
 
     Chicken[] chickens;
@@ -18,8 +20,8 @@ public class baek_15686 extends Solution {
     int answer = Integer.MAX_VALUE;
 
     @Override
-    public void solution() throws IOException {
-        StringTokenizer token = new StringTokenizer(read.readLine(), " ");
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        StringTokenizer token = new StringTokenizer(read.readLine(), " ");
 
         N = Integer.parseInt(token.nextToken());
         M = Integer.parseInt(token.nextToken());
@@ -108,4 +110,11 @@ public class baek_15686 extends Solution {
     }
 
 
+    static {
+        try {
+            new baek_15686().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

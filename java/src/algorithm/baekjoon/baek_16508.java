@@ -1,12 +1,13 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.Arrays;
+import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class baek_16508 extends Solution {
+public class baek_16508 extends Main {
     int[] res;
     String T;
     int N;
@@ -22,8 +23,8 @@ public class baek_16508 extends Solution {
     long answer = Integer.MAX_VALUE;
 
     @Override
-    public void solution() throws IOException {
-        T = read.readLine();
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        T = read.readLine();
         N = Integer.parseInt(read.readLine());
 
         /*
@@ -260,6 +261,13 @@ public class baek_16508 extends Solution {
             for (int j = 0; j < temp.length; j++) {
                 alphabetW[temp[j] - 'A']--;
             }
+        }
+    }
+    static {
+        try {
+            new baek_16508().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

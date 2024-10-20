@@ -1,18 +1,23 @@
 package algorithm.baekjoon;
 
-import algorithm.Solution;
+import algorithm.Main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.*;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.Queue;
 
-public class baek_2667 extends Solution {
+public class baek_2667 extends Main {
     int N;
     ArrayList<Integer> answer = new ArrayList<>();
     int answerSize = 1;
 
     @Override
-    public void solution() throws IOException {
-        N = Integer.parseInt(read.readLine());
+    public void run() throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));        N = Integer.parseInt(read.readLine());
         int[][] arr = new int[N][N];
 
         for (int i = 0; i < N; i++) {
@@ -85,6 +90,13 @@ public class baek_2667 extends Solution {
         Data(int r, int c) {
             this.r = r;
             this.c = c;
+        }
+    }
+    static {
+        try {
+            new baek_2667().run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

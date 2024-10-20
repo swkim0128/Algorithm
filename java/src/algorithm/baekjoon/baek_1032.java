@@ -1,10 +1,11 @@
 package algorithm.baekjoon;
 
-import algorithm.SolutionImpl;
+import algorithm.Main;
+
 import java.util.Scanner;
 
-public class baek_1032 implements SolutionImpl {
-    public void solution() {
+public class baek_1032 extends Main {
+    public void run() {
         Scanner scan = new Scanner(System.in);
 
         int numberOfFile = scan.nextInt();
@@ -40,5 +41,8 @@ public class baek_1032 implements SolutionImpl {
 
         System.out.println(answer);
 
+    }
+    static {
+        new baek_1032().run();
     }
 }
