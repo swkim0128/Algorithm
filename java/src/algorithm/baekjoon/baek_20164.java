@@ -19,7 +19,7 @@ public class baek_20164 extends Main {
             result = dfs(0, 0, N);
         } else {
             for (int i = 1; i < N.length() - 1; i++) {
-                int temp = dfs(N);
+                int temp = dfs(0, 0, N);
             }
         }
     }
@@ -40,7 +40,7 @@ public class baek_20164 extends Main {
             int cnt = 0;
             cnt = x % 2 == 0 ? cnt : cnt + 1;
             cnt = y % 2 == 0 ? cnt : cnt + 1;
-            cnt += dfs(String.valueOf(s, e, x + y));
+//            cnt += dfs(String.valueOf(s, e, x + y));
             return cnt;
         } else if (N.length() == 3){
             int x = Integer.parseInt(N.substring(0, 1));
@@ -51,7 +51,7 @@ public class baek_20164 extends Main {
             cnt = x % 2 == 0 ? cnt : cnt + 1;
             cnt = y % 2 == 0 ? cnt : cnt + 1;
             cnt = z % 2 == 0 ? cnt : cnt + 1;
-            cnt += dfs(String.valueOf(s, e, x + y + z));
+//            cnt += dfs(String.valueOf(s, e, x + y + z));
             return cnt;
         } else {
             int x = Integer.parseInt(N.substring(0, s));
@@ -62,7 +62,7 @@ public class baek_20164 extends Main {
             cnt = x % 2 == 0 ? cnt : cnt + 1;
             cnt = y % 2 == 0 ? cnt : cnt + 1;
             cnt = z % 2 == 0 ? cnt : cnt + 1;
-            cnt += dfs(String.valueOf(s, e, x + y + z));
+//            cnt += dfs(String.valueOf(s, e, x + y + z));
             return cnt;
         }
     }
